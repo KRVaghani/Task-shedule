@@ -1,54 +1,138 @@
-# React + TypeScript + Vite
+# Task Scheduler
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern task scheduling application built with React, TypeScript, and Vite. This application helps you organize and manage your tasks with different calendar views (week, month, year) and task status tracking.
 
-Currently, two official plugins are available:
+![Task Scheduler Screenshot](screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Multiple Calendar Views**: Switch between week, month, and year views
+- **Task Management**: Create, update, and delete tasks
+- **Status Tracking**: Monitor task status (pending, in-progress, completed)
+- **Priority Levels**: Assign low, medium, or high priority to tasks
+- **Theme Switching**: Toggle between light and dark themes
+- **Responsive Design**: Works on desktop and mobile devices
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Frontend**: React 19, TypeScript, Vite
+- **Styling**: CSS with responsive design
+- **API Communication**: Axios
+- **Backend**: JSON Server (REST API)
+- **Libraries**:
+  - date-fns: Date manipulation
+  - react-icons: UI icons
+  - @hello-pangea/dnd: Drag and drop functionality
+
+## Prerequisites
+
+- Node.js (v16 or later)
+- npm or yarn
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/KRVaghani/Task-shedule.git
+   cd Task-shedule
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+
+3. Start the JSON server (API):
+   ```bash
+   npx json-server --watch db.json --port 3001
+   ```
+
+4. In a new terminal, start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. Open your browser and visit:
+   ```
+   http://localhost:5173
+   ```
+
+## Usage
+
+1. **Adding a Task**:
+   - Fill out the task form with title, description, date, time, and priority
+   - Click "Add Task" to save
+
+2. **Viewing Tasks**:
+   - Use the view switcher to toggle between week, month, and year views
+   - Tasks are displayed based on their scheduled dates
+
+3. **Managing Tasks**:
+   - Click on a task to view details or update its status
+   - Tasks are color-coded by priority and status
+
+## Project Structure
+
+```
+src/
+├── App.tsx              # Main application component
+├── components/
+│   ├── MonthView.tsx    # Month calendar view
+│   ├── StatusView.tsx   # Task status tracking view
+│   ├── TaskForm.tsx     # Task creation form
+│   ├── ThemeSwitcher.tsx # Theme toggle component
+│   ├── ViewSwitcher.tsx # Calendar view selector
+│   ├── WeekView.tsx     # Week calendar view
+│   └── YearView.tsx     # Year calendar view
+└── types/
+    └── task.ts          # TypeScript interfaces for tasks
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Available Scripts
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- `npm run dev`: Start the development server
+- `npm run build`: Build the production-ready application
+- `npm run lint`: Lint the codebase
+- `npm run preview`: Preview the built application
+
+### Backend API
+
+The application uses JSON Server as a mock backend. The API endpoints are:
+
+- `GET /tasks`: Retrieve all tasks
+- `POST /tasks`: Create a new task
+- `PUT /tasks/:id`: Update a task
+- `DELETE /tasks/:id`: Delete a task
+
+## Deployment
+
+To deploy the application:
+
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+
+2. Deploy the contents of the `dist` folder to your hosting provider of choice.
+
+3. Ensure your backend API is also deployed and accessible.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- React team for the amazing framework
+- Vite for the blazing fast build tool
+- All open-source libraries used in this project
