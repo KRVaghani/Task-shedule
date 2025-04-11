@@ -1,0 +1,80 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "phone": "098-765-4321"
+    },
+    {
+      "id": "0a68",
+      "name": "ritu gavande",
+      "email": "kaushik.vaghani111@gmail.com",
+      "phone": "0852112131"
+    },
+    {
+      "id": "a4fe",
+      "name": "Kaushik Vaghani",
+      "email": "kaushik.vaghani111@gmail.com",
+      "phone": "08469307921"
+    },
+    {
+      "id": "6a90",
+      "name": "Kaushik Rajubhai Vaghani",
+      "email": "kaushik.vaghani111@gmail.com",
+      "phone": "0892159238"
+    },
+    {
+      "id": "9bfe",
+      "name": "Kaushik Vaghani",
+      "email": "kaushik.vaghani111@gmail.com",
+      "phone": "08469307921"
+    },
+    {
+      "id": "7217",
+      "name": "Kaushik Vaghani",
+      "email": "kaushik.vaghani111@gmail.com",
+      "phone": "08469307921"
+    },
+    {
+      "id": "0f2d",
+      "name": "Kaushik Vaghani",
+      "email": "kaushik.vaghani111@gmail.com",
+      "phone": "08469307921"
+    },
+    {
+      "id": "1953",
+      "name": "kaushik",
+      "email": "kaushik.vaghani111@gmail.com",
+      "phone": "08469307921"
+    },
+    {
+      "id": "5059",
+      "name": "kaushik",
+      "email": "kaushik.vaghani111@gmail.com",
+      "phone": "08469307921"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "wdkjwdnknwdnwkdnw",
+      "description": "This is a sample task",
+      "date": "2025-08-12",
+      "startTime": "09:00",
+      "endTime": "10:00",
+      "status": "in-progress",
+      "priority": "medium"
+    },
+    {
+      "id": "bfa9",
+      "title": "google application",
+      "description": "apply through linkedin",
+      "date": "2025-04-11",
+      "startTime": "09:00",
+      "endTime": "10:00",
+      "status": "in-progress",
+      "priority": "high"
+    }
+  ]
+}
